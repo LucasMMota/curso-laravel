@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Http\Request;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -55,4 +57,34 @@ Route::view('/viewnome', 'hellonome', ['nome' => 'Lucas', 'sobrenome' => "Fonsec
 
 Route::get('/hellonome/{nome}/{sobrenome}', function ($nome, $sn) { // passa as variaveis recebinas na uri para a view
     return view('hellonome', ['nome' => $nome, 'sobrenome' => $sn]);
+});
+
+Route::get('/rest/hello', function () {
+    return "Hello (GET)";
+});
+
+Route::post('/rest/hello', function () {
+    return "Hello (POST)";
+});
+
+Route::delete('/rest/hello', function () {
+    return "Hello (DELETE)";
+});
+
+Route::put('/rest/hello', function () {
+    return "Hello (PUT)";
+});
+
+Route::patch('/rest/hello', function () {
+    return "Hello (PATCH)";
+});
+
+Route::options('/rest/hello', function () {
+    return "Hello (OPTIONS)";
+});
+
+Route::post('/rest/imprimir', function (Request $req) {
+    $nome = $req->input('nome');
+    $idade = $req->input('idade');
+    return "Hello $nome ($idade)!! (POST)";
 });
