@@ -88,3 +88,25 @@ Route::post('/rest/imprimir', function (Request $req) {
     $idade = $req->input('idade');
     return "Hello $nome ($idade)!! (POST)";
 });
+
+Route::match(['get', 'post'], '/rest/hello2', function () {
+    return 'Hello world 2';
+});
+
+Route::any('/rest/hello3', function () { // todos os metodos
+    return 'Hello world 2';
+});
+
+Route::get('/produtos', function () {
+    echo '<h1>Produtos</h1>';
+    echo '<ol><li>Notebook</li><li>Impressora</li><li>Mouse</li></ol>';
+})->name('meusprodutos');
+
+Route::get('/linkprodutos', function () {
+    $url = route('meusprodutos');
+    echo "<a href='$url'>Meus produtos</a>";
+});
+
+Route::get('/redirecionarprodutos', function () {
+    return redirect()->route('meusprodutos');
+});
