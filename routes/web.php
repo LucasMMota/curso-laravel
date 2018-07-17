@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('filho');
 });
 
 // Controller
@@ -36,6 +36,12 @@ Route::get('/ola/{nome}/{sobrenome}', function ($nome, $sobrenome) {
 //    return view('minhaview')->with('nome', 'João')->with('sobrenome', 'Silva');
 //    return view('minhaview', ['nome' => $nome, 'sobrenome' => $sobrenome]);
     return view('minhaview', compact('nome', 'sobrenome'));
+});
+
+Route::get('/email/{email}', function ($email) {
+    if (View::exists('email'))
+        return view('email', compact('email'));
+    return view('erro');
 });
 
 //
