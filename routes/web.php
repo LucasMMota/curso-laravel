@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', function () {
-    return view('filho');
+    return view('pagina');
 });
 
 // Controller
