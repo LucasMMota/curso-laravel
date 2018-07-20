@@ -1,8 +1,8 @@
-/node_modules
-/public/hot
-/public/storage
-/storage/*.key
-/vendor
+exemplos/node_modules
+exemplos/public/hot
+exemplos/public/storage
+exemplos/storage/*.key
+exemplos/vendor
 /.idea
 /.vscode
 /.vagrant

@@ -138,3 +138,9 @@ Route::get('/email/{email}', function ($email) {
 //Route::get('/redirecionarprodutos', function () {
 //    return redirect()->route('meusprodutos');
 //});
+
+Route::get('/produtos', 'ProdutoController@listar');
+
+Route::get('/loop/for/{in}', 'ProdutoController@loop');
+
+Route::get('/loop/foreach', 'ProdutoController@loopforeach');
