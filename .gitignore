@@ -3,6 +3,7 @@ exemplos/public/hot
 exemplos/public/storage
 exemplos/storage/*.key
 exemplos/vendor
+exemplos/.env
 /.idea
 /.vscode
 /.vagrant
@@ -10,4 +11,9 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-.env
+vendas/node_modules
+vendas/public/hot
+vendas/public/storage
+vendas/storage/*.key
+vendas/vendor
+vendas/.env
