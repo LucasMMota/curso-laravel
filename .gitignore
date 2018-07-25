@@ -17,3 +17,9 @@ vendas/public/storage
 vendas/storage/*.key
 vendas/vendor
 vendas/.env
+modelos/node_modules
+modelos/public/hot
+modelos/public/storage
+modelos/storage/*.key
+modelos/vendor
+modelos/.env
