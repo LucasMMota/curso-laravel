@@ -1,3 +1,4 @@
+*/.idea/*
 exemplos/node_modules
 exemplos/public/hot
 exemplos/public/storage
@@ -23,3 +24,9 @@ modelos/public/storage
 modelos/storage/*.key
 modelos/vendor
 modelos/.env
+cadastro/node_modules
+cadastro/public/hot
+cadastro/public/storage
+cadastro/storage/*.key
+cadastro/vendor
+cadastro/.env
