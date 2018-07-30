@@ -13,7 +13,7 @@
 
 <body>
 <div class="container">
-    @component('componente_navbar')
+    @component('layouts.componente_navbar', ['current'=> $current])
     @endcomponent
     <main role="main">
         @hasSection('body')
