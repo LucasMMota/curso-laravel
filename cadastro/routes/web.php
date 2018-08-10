@@ -16,4 +16,12 @@ Route::get('/', function () {
 });
 
 Route::get('/produtos', 'ProdutoController@index');
-Route::get('/categorias', 'CategoriaController@index');
+
+Route::prefix('categorias')->group(function () {
+    Route::get('/', 'CategoriaController@index')->name('categorias.index');
+    Route::get('/novo', 'CategoriaController@create');
+    Route::post('/', 'CategoriaController@store');
+    Route::get('/remover/{id}', 'CategoriaController@destroy');
+    Route::get('/editar/{id}', 'CategoriaController@edit');
+    Route::post('/editar/{id}', 'CategoriaController@update');
+});
