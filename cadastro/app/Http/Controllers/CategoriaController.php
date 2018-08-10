@@ -64,7 +64,6 @@ class CategoriaController extends Controller
     {
         $cat = Categoria::find($id);
         if($cat){
-            echo 'aqui';
             return view('categorias.editar', compact('cat'));
         }
         return redirect()->name('categorias.index');
@@ -79,7 +78,12 @@ class CategoriaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $cat = Categoria::find($id);
+        if($cat){
+            $cat->name = $request->input('nomeCategoria');
+            $cat->save();
+        }
+        return redirect('/categorias');//->name('categorias.index');
     }
 
     /**
